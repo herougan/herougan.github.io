@@ -1,0 +1,59 @@
+Requirements  
+
+0) Add to app-todo
+1) Blogs
+	a) List of blog posts (Easy if automatic)
+	b) Customised content e.g. images
+2) Backlog page
+-
+3) Splash
+	Screen goes down at different speeds? Artistic + User entranced by non-sinngular scroll speed
+	Splash (Artistic)
+4) Who am I (Cards)
+	Physicist,
+	Developer of the Web, of Systems, of Software,
+	Data Analyst, Slots,
+	Project Manager
+	Entrepreneur
+5) Showcases (Artistic) (Break)
+6) Project Showcases
+7) Blog links, etc
+8) Footer
+
+/* Ideas 
+
+"Subscribe" - sends them an email
+  ===== Main Page: Who am I =====
+
+  Minimalist but also slightly brutalist vibe
+
+  ----- Introduction ----
+
+  Main .gif in the centre
+
+  Text that floats behind, moving to the right
+  Text that floats behind, moving to the left
+  Colour burn effects, nice light smooth colours
+
+  ----- Who -----
+
+  Text on the left that floats in
+  Text on the right that floats in
+
+  Colour change to whole site at different sections
+  A dog which runs around
+
+  Sections:
+
+    Intro
+    
+    Who
+
+    Thingies
+      - Subscribe button
+      - Random infographics (LinkedIn + Web Post)
+
+
+  ===== Backlog Page: The Me-log/Me Backlog =====
+
+*/

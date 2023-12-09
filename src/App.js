@@ -1,4 +1,7 @@
 import logo from './logo.svg';
+import smiling_dog from './resources/dog-smile.gif';
+import maine_coon from './resources/maine_coon.gif';
+import peach_cat from './resources/peach_cat.gif';
 import './App.css';
 import { useLayoutEffect, useState } from 'react';
 import { style } from './index.css';
@@ -39,25 +42,41 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className='title-section flex'>
+        <div className='title-section flex place-content-center items-center w-full'>
           <div>
             <h3>Jay Here</h3>
           </div>
           <div>
-            <img src={logo} id='cat-typing' className="Jay-logo" alt="Cat typing on computer" />
+            <img src={smiling_dog} id='cat-typing' className="Jay-logo" alt="Cat typing on computer" />
           </div>
         </div>
         <div className='who-section'>
-          <div className='who-card card-1'>
-            <p></p>
-            <img src={logo} id='engineering' alt="gears and wrenches" role='decorative'></img>
+          <div className='who-card card-1 flex flex-row place-content-center items-center'>
+            <div>
+              <p>Test text on the left</p>
+            </div>
+            <div>
+            <img src={peach_cat} id='engineering' alt="gears and wrenches" role='decorative'></img>
+            </div>
           </div>
-          <div className='who-card card-2'>
-            <p></p>
-            <img src={logo} id='coffee' alt='' role='decorative'></img> 
+          <div className='who-card card-2 flex flex-row place-content-center items-center'>
+            <div>
+            <img src={maine_coon} id='coffee' alt='' role='decorative'></img> 
+            </div>
+            <div>
+              <p>Test text on the right</p>
+            </div>
             {/* Alt Text, but what about decorative alt text */}
           </div>
-          <div className='who-card card-3'>
+          <div className='who-card card-1 flex flex-row place-content-center items-center'>
+            <div>
+              <p>Test text on the left</p>
+            </div>
+            <div>
+            <img src={peach_cat} id='engineering' alt="gears and wrenches" role='decorative'></img>
+            </div>
+          </div>
+          <div className='who-card card-3 flex flex-row place-content-center items-center'>
             <p></p>
             <img src={logo} id='flower' role='decorative'></img>
           </div>
@@ -80,11 +99,32 @@ function App() {
         <div className='socials-row'>
 
         </div>
-        <div className='footer-table'>
-          <div className='footer-col-1'></div>
-          <div className='footer-col-2'></div>
-          <div className='footer-col-3'></div>
-          <div className='footer-col-4'></div>
+        <div className='footer-table grid grid-cols-4 hover:grid-cols-2'>
+          <div className='footer-col-1'>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+          </div>
+          <div className='footer-col-2'>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            </div>
+          <div className='footer-col-3'>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            </div>
+          <div className='footer-col-4'>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            <div><p>Hi</p></div>
+            </div>
         </div>
       </footer>
     </div>
@@ -92,38 +132,3 @@ function App() {
 }
 
 export default App;
-
-/* Ideas 
-
-"Subscribe" - sends them an email
-(Shit, this requires database and stuff
-  - unless I can find a plugin that
-  does this codeless)
-
-
-  ===== Main Page: Who am I =====
-
-  Minimalist but also slightly brutalist vibe
-
-  Main .gif in the centre
-
-  Text on the left that floats in
-  Text on the right that floats in
-
-  Colour change to whole site at different sections
-  A dog which runs around
-
-  Sections:
-
-    Intro
-    
-    Who
-
-    Thingies
-      - Subscribe button
-      - Random infographics (LinkedIn + Web Post)
-
-
-  ===== Backlog Page: The Me-log/Me Backlog =====
-
-*/
