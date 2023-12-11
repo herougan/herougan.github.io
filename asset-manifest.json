@@ -1,19 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.5baa9125.css",
-    "main.js": "/static/js/main.613e6fe4.js",
+    "main.css": "/static/css/main.2f3939eb.css",
+    "main.js": "/static/js/main.eaff6e75.js",
     "static/js/787.f2ac2644.chunk.js": "/static/js/787.f2ac2644.chunk.js",
+    "static/media/peach-hurray.gif": "/static/media/peach-hurray.ee9e7b1e48eebf7fce3d.gif",
     "static/media/dog-smile.gif": "/static/media/dog-smile.38174c52046b7f4e203b.gif",
     "static/media/maine_coon.gif": "/static/media/maine_coon.e7ef6c4d9b0591704fea.gif",
+    "static/media/blue_skies.jpeg": "/static/media/blue_skies.0dfbf32fd5daf8a606a7.jpeg",
+    "static/media/peach-box-goma.gif": "/static/media/peach-box-goma.070e1056b239187e90a3.gif",
+    "static/media/qr.jpg": "/static/media/qr.a4b8f5020ddd32f7d8f3.jpg",
     "static/media/peach_cat.gif": "/static/media/peach_cat.b9098978b3317bd0f0b5.gif",
+    "static/media/garden.jpeg": "/static/media/garden.e63b81f2c79cf79cdaaa.jpeg",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.5baa9125.css.map": "/static/css/main.5baa9125.css.map",
-    "main.613e6fe4.js.map": "/static/js/main.613e6fe4.js.map",
+    "main.2f3939eb.css.map": "/static/css/main.2f3939eb.css.map",
+    "main.eaff6e75.js.map": "/static/js/main.eaff6e75.js.map",
     "787.f2ac2644.chunk.js.map": "/static/js/787.f2ac2644.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5baa9125.css",
-    "static/js/main.613e6fe4.js"
+    "static/css/main.2f3939eb.css",
+    "static/js/main.eaff6e75.js"
   ]
 }
