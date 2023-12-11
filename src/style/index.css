@@ -40,6 +40,25 @@ h3 {
 .title-section {
   background-color:var(--blue);
   height: 600px;
+  line-height: 12em;
+}
+
+.title-left {
+  font-size: 15rem;
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.title-right {
+  font-size: 15rem;
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.title-main {
+  position: absolute;
 }
 
 /* Who I am */
@@ -55,6 +74,14 @@ h3 {
   margin-left: 2vh;
   margin-bottom: 2vh;
   margin-right: 2vh;
+}
+
+.who-card.left {
+  transform: translate(-10px, 0);
+}
+
+.who-card.right {
+  transform: translate(10px, 0);
 }
 
 /* Splash 2 */

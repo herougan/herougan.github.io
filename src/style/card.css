@@ -1,0 +1,31 @@
+:root {
+	/* Colour Palette 1 */
+	--lime: #d3fac7;
+	--brown: #613a3a;
+	--blue: #035e7b;
+	--yellow: #f6ae2d;
+	--pink: #ffb7c3;
+	--black: #110A0B;
+  }
+
+.project-card {
+	background-color: var(--pink);
+	overflow: hidden;
+	width: 200px;
+}
+
+.project-card-img {
+	/* height: 125px; */
+	/* overflow: hidden; */
+}
+
+.project-card img {
+	object-fit: cover;
+	height: 200px;
+}
+
+.project-desc {
+	height: 200px;
+	background-color: var(--lime);
+	color: var(--black);
+}

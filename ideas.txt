@@ -1,3 +1,4 @@
+/*
 Requirements  
 
 0) Add to app-todo
@@ -19,6 +20,7 @@ Requirements
 6) Project Showcases
 7) Blog links, etc
 8) Footer
+*/
 
 /* Ideas 
 
@@ -55,5 +57,35 @@ Requirements
 
 
   ===== Backlog Page: The Me-log/Me Backlog =====
+
+*/
+
+
+/* 
+https://www.wix.com/blog/best-portfolio-websites
+
+Roles:
+
+Creative, Spinclass, Kid
+Project Manager
+Developer, Data Analyst
+Physicist, Mathematician, Philosopher
+
+Banner Cards, Left Image, Right Text
+
+*/
+
+/*
+Showcases:
+
+Vertical Card Items
+
+*/
+
+
+/*
+
+Flatten view on mobile view
+e.g. grid becomes size-1
 
 */
