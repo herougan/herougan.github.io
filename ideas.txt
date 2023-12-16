@@ -79,6 +79,8 @@ Banner Cards, Left Image, Right Text
 Showcases:
 
 Vertical Card Items
+Highlighting some words in the who-card menu
+
 
 */
 
@@ -87,5 +89,13 @@ Vertical Card Items
 
 Flatten view on mobile view
 e.g. grid becomes size-1
+
+*/
+
+/*
+
+Game:
+
+Qr Code then hides within folders
 
 */

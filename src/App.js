@@ -23,6 +23,7 @@ const products = [
   { title: 'Cabbage', id: 1 },
   { title: 'Garlic', id: 2 },
   { title: 'Apple', id: 3 },
+  { title: 'Googlet', id: 4 },
 ];
 
 function App() {  
@@ -37,6 +38,30 @@ function App() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
     
+
+      let buttons = gsap.utils.toArray<HTMLElement>(".project-card");
+      buttons.forEach((button, i) => {
+        
+        button.addEventListener("mouseenter", () => {
+          gsap.to(button, 
+            {
+              rotationY: 0, scale: 1.05, x: 0, duration: 0.1, overwrite: true, opacity: 1,
+            }
+          );
+        });
+        
+        button.addEventListener("mouseout", () => {
+          gsap.to(button, 
+            {
+              rotationY: 0, scale: 1.0, x: 0, duration: 0.1, overwrite: true, opacity: 1,
+            }
+          );
+        });
+      });
+
+
+
+
     });
   })
 
@@ -115,7 +140,7 @@ function App() {
               <img src={blue_skies} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
             <div className='project-desc'>
-              Test text
+              Backtest your custom trading algorithms against custom datasets.
             </div>
           </div>
           <div className='project-card'>
