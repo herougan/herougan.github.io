@@ -1,19 +1,20 @@
-import logo from './logo.svg';
 import smiling_dog from './resources/dog-smile.gif';
 import maine_coon from './resources/maine_coon.gif';
 import peach_cat from './resources/peach_cat.gif';
 import peach_goma from './resources/peach-box-goma.gif';
 import peach_hurray from './resources/peach-hurray.gif';
-import blue_skies from './resources/blue_skies.jpeg';
-import garden from './resources/garden.jpeg';
-import qr from './resources/qr.jpg'
+import blue_skies from './resources/blue_skies.jpg';
+import garden from './resources/garden.jpg';
+import qr from './resources/qr.jpg';
 
 import './App.css';
-import { useLayoutEffect, useState } from 'react';
-import { style } from './style/index.css';
-import { cardStyle } from './style/card.css';
-import { bannerCardStyle } from './style/banner-card.css';
+import './styles/index.css'
+import './styles/card.css'
+import './styles/banner-card.css'
+
 import gsap from "gsap";
+import { useLayoutEffect, useState } from 'react';
+
 
 const roadmap = [
 
@@ -38,7 +39,7 @@ function App() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
     
-
+      // Project card flip effect
       let buttons = gsap.utils.toArray<HTMLElement>(".project-card");
       buttons.forEach((button, i) => {
         
@@ -58,10 +59,7 @@ function App() {
           );
         });
       });
-
-
-
-
+      
     });
   })
 
@@ -75,9 +73,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className='main-navbar'>
+        <div className='main-navbar grid grid-cols-4 gap-16'>
           {/* Hamburger icon that summons a "This does nothing" */}
           {/* <img></img> */}
+          <div><a>Jay</a></div>
+          <div><a>SAR</a></div>
+          <div><a>Break</a></div>
+          <div><a>TradeHunter</a></div>
+          {/* Light Switch */}
         </div>
         {/* Title Section */}
         <div className='title-section flex place-content-center items-center w-full'>

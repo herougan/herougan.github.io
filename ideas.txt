@@ -25,9 +25,20 @@ Requirements
 /* Ideas 
 
 "Subscribe" - sends them an email
+
+  ----- Banner -----
+  Jay
+  SAR (Super Auto Rocks)
+  Trade Hunter (Features d3.js)
+
   ===== Main Page: Who am I =====
 
   Minimalist but also slightly brutalist vibe
+  Customer Centric
+  Design Thinking
+  (Hovering over one, highlights one of them and puts it above the other)
+  The words move into each other and out, like in a sin wave pattern, very slowly
+  (Some letters turn red on hover - might be impossible unless we separate each text into their own col)
 
   ----- Introduction ----
 
@@ -72,6 +83,8 @@ Developer, Data Analyst
 Physicist, Mathematician, Philosopher
 
 Banner Cards, Left Image, Right Text
+(Banner floats in cutely and with more force)
+(Text appears to float up abit, and appear from fade)
 
 */
 

@@ -61,6 +61,12 @@ h3 {
   position: absolute;
 }
 
+/* Nav */
+
+.main-navbar div {
+  border-bottom: var(--blue);
+}
+
 /* Who I am */
 
 .who-section {
