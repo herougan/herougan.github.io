@@ -27,9 +27,9 @@ Requirements
 "Subscribe" - sends them an email
 
   ----- Banner -----
-  Jay
-  SAR (Super Auto Rocks)
-  Trade Hunter (Features d3.js)
+  Jay -> just a line, curves abit
+  SAR (Super Auto Rocks) -> two lines
+  Trade Hunter (Features d3.js) -> 3 lines
 
   ===== Main Page: Who am I =====
 
@@ -39,6 +39,16 @@ Requirements
   (Hovering over one, highlights one of them and puts it above the other)
   The words move into each other and out, like in a sin wave pattern, very slowly
   (Some letters turn red on hover - might be impossible unless we separate each text into their own col)
+
+  **** Current Difficulty
+  *   Width of pagee gets extended because anchor text goes through.
+  *   Overflow: Hidden doesn't work
+  *
+  *   Idea: Change the width in animations too - create a horizontally-disappearing text
+  ****
+
+  Title-left and title-right words lay along the page
+  they blend into the background when you scroll down
 
   ----- Introduction ----
 
@@ -68,6 +78,11 @@ Requirements
 
 
   ===== Backlog Page: The Me-log/Me Backlog =====
+
+  ---- What ----
+
+  Some of them 'flip' over like a vertical book
+  Some of them rotate and fall off the 'hinges'
 
 */
 

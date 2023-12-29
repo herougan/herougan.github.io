@@ -38,21 +38,80 @@ function App() {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
+      // ===== Start =====
+    
+      // Nav bar rotate effect
+      let nav_items = gsap.utils.toArray<HTMLElement>(".navbar-item");
+      nav_items.forEach((nav_item, i) => {
+        
+        nav_item.addEventListener("mouseenter", () => {
+          gsap.to(nav_item, 
+            {
+              rotationZ: 180, x: 0, duration: 0.5, overwrite: true, opacity: 1, ease: 'circ.out',
+            }
+          );
+        });
+        
+        nav_item.addEventListener("mouseout", () => {
+          gsap.to(nav_item, 
+            {
+              rotationZ: 0, x: 0, duration: 0.5, overwrite: true, opacity: 1, ease: 'circ.out',
+            }
+          );
+        });
+      });
+
+      // Words moving effect
+      let title_left = document.getElementsByClassName("title-left")[0];
+      let title_right = document.getElementsByClassName("title-right")[0];
+      let title_left_a = document.getElementsByClassName("title-left-a")[0];
+      let title_right_a = document.getElementsByClassName("title-right-a")[0];
+      // Todo, grab the anchors instead of the div.
+      gsap.to(title_left, 
+        {
+          x: 100, repeat: -1, yoyo: true, duration: 10, yoyoEase: "power2.in",
+        })
+      gsap.to(title_right, 
+        {
+          x: -100, repeat: -1, yoyo: true, duration: 10, yoyoEase: "power2.in",
+        })
+        // Fix the easing here - it should ease on both sides
+        title_left_a.addEventListener("mouseenter", () => {
+          gsap.to(title_left_a, {
+            color: "#FF9999",
+          }) 
+        })
+        title_left_a.addEventListener("mouseout", () => {
+          gsap.to(title_left_a, {
+            color: "white",
+          }) 
+        })
+        // Fix the easing here - it should ease on both sides
+        title_right_a.addEventListener("mouseenter", () => {
+          gsap.to(title_right_a, {
+            color: "#FF9999",
+          }) 
+        })
+        title_right_a.addEventListener("mouseout", () => {
+          gsap.to(title_right_a, {
+            color: "white",
+          }) 
+        })
     
       // Project card flip effect
-      let buttons = gsap.utils.toArray<HTMLElement>(".project-card");
-      buttons.forEach((button, i) => {
+      let project_cards = gsap.utils.toArray<HTMLElement>(".project-card");
+      project_cards.forEach((project_card, i) => {
         
-        button.addEventListener("mouseenter", () => {
-          gsap.to(button, 
+        project_card.addEventListener("mouseenter", () => {
+          gsap.to(project_card, 
             {
               rotationY: 0, scale: 1.05, x: 0, duration: 0.1, overwrite: true, opacity: 1,
             }
           );
         });
         
-        button.addEventListener("mouseout", () => {
-          gsap.to(button, 
+        project_card.addEventListener("mouseout", () => {
+          gsap.to(project_card, 
             {
               rotationY: 0, scale: 1.0, x: 0, duration: 0.1, overwrite: true, opacity: 1,
             }
@@ -60,6 +119,31 @@ function App() {
         });
       });
       
+      // Who card
+      let who_cards = gsap.utils.toArray<HTMLElement>(".who-card");
+      who_cards.forEach((who_card, i) => {
+
+        who_card.addEventListener("mouseenter", () => {
+          gsap.to(who_card, {
+            rotationY: 0, scale: 1.05, duration: 0.2
+          })
+          gsap.to(who_card, {
+            rotationX: 0, scale: 1.05, duration: 0.2
+          })
+        })
+
+        who_card.addEventListener("mouseout", () => {
+          gsap.to(who_card, {
+            rotationY: 0, scale: 1.02, duration: 0.2
+          })
+          gsap.to(who_card, {
+            rotationX: 0, scale: 1.0, duration: 0.2
+          })
+        })
+
+      });
+
+      // ===== End =====
     });
   })
 
@@ -73,13 +157,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className='main-navbar grid grid-cols-4 gap-16'>
+        <div className='main-navbar grid grid-cols-4'>
           {/* Hamburger icon that summons a "This does nothing" */}
           {/* <img></img> */}
-          <div><a>Jay</a></div>
-          <div><a>SAR</a></div>
-          <div><a>Break</a></div>
-          <div><a>TradeHunter</a></div>
+          {/* Jay */}
+          <div className='navbar-item'><a>-</a></div>
+          {/* SAR */}
+          <div className='navbar-item'><a>-</a></div>
+          {/* Break */}
+          <div className='navbar-item'><a><i>-</i></a></div>
+          {/* TradeHunter */}
+          <div className='navbar-item'><a>-</a></div>
           {/* Light Switch */}
         </div>
         {/* Title Section */}
@@ -88,10 +176,10 @@ function App() {
             <a>Here Jay Here Here Here Here Here</a>
           </div>
           <div className='title-left'>
-            <a>Design Thinking</a>
+            <a className='title-left-a'>Design Thinking</a>
           </div>
           <div className='title-right'>
-            <a>Customer Centric</a>
+            <a className='title-right-a'>Customer Centric</a>
           </div>
           <div>
             <img src={smiling_dog} id='cat-typing' className="Jay-logo" alt="Cat typing on computer" />
@@ -105,6 +193,10 @@ function App() {
         </div>
         {/* Who Section (Role) */}
         <div className='who-section'>
+          <div className='switch-board'>
+            <div className='switch'></div>
+            <div className='switch-pendulum'></div>
+          </div>
           <div className='who-card left role-card card-1 flex flex-row place-content-center items-center'>
             <div>
               <p>Designer</p>
@@ -133,7 +225,7 @@ function App() {
             <div>
             <img src={peach_hurray} id='flower' role='decorative'></img>
             </div>
-            <p>Nondescript</p>
+            <p>Engineer</p>
           </div>
         </div>
         {/* What Section (Project showcases) */}
@@ -141,6 +233,9 @@ function App() {
           <div className='project-card'>
             <div className='project-card-img'>
               <img src={blue_skies} id='engineering' alt="gears and wrenches" role='decorative'></img>
+            </div>
+            <div className='project-title'>
+              ...
             </div>
             <div className='project-desc'>
               Backtest your custom trading algorithms against custom datasets.
@@ -233,12 +328,12 @@ function App() {
       </header>
       <footer>
         {/* Socials and Links */}
-        <div className='socials-row'>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className='socials-row grid grid-cols-5'>
+          <div>Facebook</div>
+          <div>Instagram</div>
+          <div>Twitter X</div>
+          <div>LinkedIn</div>
+          <div>Github</div>
         </div>
         <div className='footer-table grid grid-cols-4 hover:grid-cols-2'>
           <div className='footer-col-1'>
