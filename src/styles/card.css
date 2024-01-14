@@ -1,17 +1,7 @@
-:root {
-	/* Colour Palette 1 */
-	--lime: #d3fac7;
-	--brown: #613a3a;
-	--blue: #035e7b;
-	--yellow: #f6ae2d;
-	--pink: #ffb7c3;
-	--black: #110A0B;
-  }
-
 .project-card {
-	background-color: var(--pink);
+	background-color: var(--colour3);
 	overflow: hidden;
-	width: 225px;
+	width: 275px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -26,14 +16,15 @@
 .project-card img {
 	object-fit: cover;
 	height: 200px;
+	width: 275px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
 
 .project-desc {
 	height: 200px;
-	background-color: var(--lime);
-	color: var(--black);
+	background-color: var(--colour2);
+	color: var(--colour5);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }

@@ -40,15 +40,9 @@ Requirements
   The words move into each other and out, like in a sin wave pattern, very slowly
   (Some letters turn red on hover - might be impossible unless we separate each text into their own col)
 
-  **** Current Difficulty
-  *   Width of pagee gets extended because anchor text goes through.
-  *   Overflow: Hidden doesn't work
-  *
-  *   Idea: Change the width in animations too - create a horizontally-disappearing text
-  ****
-
   Title-left and title-right words lay along the page
   they blend into the background when you scroll down
+  Get Texture of Drink
 
   ----- Introduction ----
 
@@ -58,13 +52,22 @@ Requirements
   Text that floats behind, moving to the left
   Colour burn effects, nice light smooth colours
 
+  Huge Text that says "AGILE CUSTOMER CENTRIC DESIGN THINKING" or something even worse than that
+  But it's focused such that, in 1s, the word customer begins scrolling across the screne. It's bright
+  and complex.
+
+  Then, in the 3rd section (so next, next), it comes down, and the word customer breaks down into
+  its individual layers
+
   ----- Who -----
 
   Text on the left that floats in
   Text on the right that floats in
 
   Colour change to whole site at different sections
-  A dog which runs around
+  A dog which runs around (and hides behind the role cards)
+    they bounce up and towards to the right on hover. click makes it shake abit
+  Picture is a carousel
 
   Sections:
 
@@ -76,11 +79,16 @@ Requirements
       - Subscribe button
       - Random infographics (LinkedIn + Web Post)
 
+  ----- Me -----
+
+  My portrait
+
 
   ===== Backlog Page: The Me-log/Me Backlog =====
 
   ---- What ----
-
+  "Side Project Thingies" label
+ 
   Some of them 'flip' over like a vertical book
   Some of them rotate and fall off the 'hinges'
 
@@ -109,6 +117,7 @@ Showcases:
 Vertical Card Items
 Highlighting some words in the who-card menu
 
+Physics applied to some random item in the page
 
 */
 
@@ -118,6 +127,11 @@ Highlighting some words in the who-card menu
 Flatten view on mobile view
 e.g. grid becomes size-1
 
+Slowly add more fx bells and whistles as it goes - but finish the skeleton first
+  e.g. square that moves right then reveals all the companies i worked for - also abit lame, but things like things
+  e.g. black/white text against black white background, colour-inverse effect.
+  e.g. Turning off the light deletes the words, but reveals pencil-drawn moons (recall effect from junji ito and spiderverse 2)
+
 */
 
 /*
@@ -125,5 +139,13 @@ e.g. grid becomes size-1
 Game:
 
 Qr Code then hides within folders
+
+*/
+/*
+Pages:
+
+https://reactrouter.com/en/main/start/tutorial
+For nested pages/routing
+
 
 */

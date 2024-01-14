@@ -4,12 +4,54 @@ import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Pages
+import Root from "./routes/root";
+import ErrorPage from "./routes/error-page";
+import Main from "./routes/main";
+import Test from "./routes/test";
+import Roadmap from "./routes/roadmap";
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    // element: <div>Hello world!</div>,
+    element: <Main />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/road",
+    element: <Roadmap />,
+    errorElement: <ErrorPage />,
+  },
+  // {
+  //   path: "/",
+  //   // element: <div>Hello world!</div>,
+  //   element: <Root />,
+  //   errorElement: <ErrorPage />,
+  // },
+  // {
+  //   path: "contacts/:contactId",
+  //   element: <Contact />,
+  // },
+]);
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

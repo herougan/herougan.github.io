@@ -1,7 +1,107 @@
-.role-card {
-	box-shadow: 3px 3px 6px black;
+/* Who I am */
+
+.who-intro {
+  color: var(--colour1);
+  font-size: 10px;
 }
 
-.role-card img {
-	max-height: 300px;
+.what-intro {
+  color: var(--colour1);
+  font-size: 15px;
+  margin-bottom: 5vh;
+}
+
+.who-section {
+  width: 80vw;
+  margin-top: 20vh;
+}
+
+.where-section {
+  width: 100vw;
+  margin-bottom: 10vh;
+}
+
+.what-section {
+  margin-bottom: 5vh;
+}
+
+.who-card {
+  height: 450px;
+  width: 60vw;
+  font-size: 10px;
+
+  @media (min-width: 640px) {
+    font-size: 20px;
+  }
+}
+
+.who-card__text {
+  width: 20vw;
+  color: var(--colour2);
+}
+
+.who-card__space {
+  width: 25vw;
+}
+
+/* .who-card.left {
+  transform: translate(-10px, 0);
+}
+
+.who-card.right {
+  transform: translate(10px, 0);
+} */
+
+.who-card img {
+  height: 15vw;
+  width: 15vw;
+  object-fit: cover;
+}
+
+.pendulum {
+  position: absolute;
+  transform: translate(5vw, 0vw);
+  height: 50px;
+  width: 16px;
+}
+
+.pendulum__string {
+  position: absolute;
+  left: 7px;
+  top: 25px;
+
+  height: 50px;
+  width: 2px;
+  background-color: var(--colour3);
+}
+
+.pendulum__weight {
+  position: absolute;
+  left: 0px;
+  top: 70px;
+
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: var(--colour3);
+}
+
+.socials-row {
+  margin-top: 5vh;
+}
+
+.experience-row {
+  margin-top: 10vh;
+}
+
+.socials-row img {
+  height: 20px;
+  object-fit: cover;
+  filter: brightness(100);
+}
+
+.experience-row img {
+  height: 125px;
+  object-fit: cover;
+  filter: brightness(100);
 }

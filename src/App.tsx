@@ -15,7 +15,6 @@ import './styles/banner-card.css'
 import gsap from "gsap";
 import { useLayoutEffect, useState } from 'react';
 
-
 const roadmap = [
 
 ];
@@ -197,7 +196,7 @@ function App() {
             <div className='switch'></div>
             <div className='switch-pendulum'></div>
           </div>
-          <div className='who-card left role-card card-1 flex flex-row place-content-center items-center'>
+          <div className='who-card left card-1 flex flex-row place-content-center items-center'>
             <div>
               <p>Designer</p>
             </div>
@@ -205,7 +204,7 @@ function App() {
             <img src={peach_cat} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
           </div>
-          <div className='who-card right role-card card-2 flex flex-row place-content-center items-center'>
+          <div className='who-card right card-2 flex flex-row place-content-center items-center'>
             <div>
             <img src={maine_coon} id='coffee' alt='' role='decorative'></img> 
             </div>
@@ -213,7 +212,7 @@ function App() {
               <p>Project Manager</p>
             </div>            {/* Alt Text, but what about decorative alt text */}
           </div>
-          <div className='who-card left role-card card-1 flex flex-row place-content-center items-center'>
+          <div className='who-card left card-1 flex flex-row place-content-center items-center'>
             <div>
               <p>Mathematician</p>
             </div>
@@ -221,7 +220,7 @@ function App() {
             <img src={peach_goma} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
           </div>
-          <div className='who-card right role-card card-3 flex flex-row place-content-center items-center'>
+          <div className='who-card right card-3 flex flex-row place-content-center items-center'>
             <div>
             <img src={peach_hurray} id='flower' role='decorative'></img>
             </div>
@@ -303,7 +302,7 @@ function App() {
         <div className='blog-section'>
 
         {/* Hobbies */}
-        <div className='who-card right role-card card-3 flex flex-row place-content-center items-center'>
+        <div className='who-card right card-3 flex flex-row place-content-center items-center'>
             <div>
             <img src={peach_hurray} id='flower' role='decorative'></img>
             </div>
