@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.a4903531.css",
-    "main.js": "/static/js/main.56cc598b.js",
+    "main.css": "/static/css/main.ad9bfd04.css",
+    "main.js": "/static/js/main.b45253fb.js",
     "static/js/787.f2ac2644.chunk.js": "/static/js/787.f2ac2644.chunk.js",
     "static/media/thumbs-up-engineer.gif": "/static/media/thumbs-up-engineer.0c8298f997138574277c.gif",
+    "static/media/fresh_look.gif": "/static/media/fresh_look.27486bb413656eb3c7ef.gif",
+    "static/media/rocky_playtime.gif": "/static/media/rocky_playtime.95f69ac4e9f7aa7a0571.gif",
     "static/media/stonks.gif": "/static/media/stonks.329357b6cbb6f3d2d041.gif",
     "static/media/peach-hurray.gif": "/static/media/peach-hurray.ee9e7b1e48eebf7fce3d.gif",
     "static/media/dog-smile.gif": "/static/media/dog-smile.38174c52046b7f4e203b.gif",
@@ -20,16 +22,15 @@
     "static/media/pgsoft-logo.png": "/static/media/pgsoft-logo.efc52b73cae0ad5c4b80.png",
     "static/media/stengg-vector-logo.png": "/static/media/stengg-vector-logo.8bff465dd0095a4e28e7.png",
     "static/media/github.png": "/static/media/github.47c1e6c013dce104e28c.png",
-    "static/media/garden.jpg": "/static/media/garden.e63b81f2c79cf79cdaaa.jpg",
     "static/media/maf_logo.png": "/static/media/maf_logo.7b44752c8040d31e3909.png",
     "static/media/linkedin.png": "/static/media/linkedin.b5deb89868f3bc2208ba.png",
     "index.html": "/index.html",
-    "main.a4903531.css.map": "/static/css/main.a4903531.css.map",
-    "main.56cc598b.js.map": "/static/js/main.56cc598b.js.map",
+    "main.ad9bfd04.css.map": "/static/css/main.ad9bfd04.css.map",
+    "main.b45253fb.js.map": "/static/js/main.b45253fb.js.map",
     "787.f2ac2644.chunk.js.map": "/static/js/787.f2ac2644.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4903531.css",
-    "static/js/main.56cc598b.js"
+    "static/css/main.ad9bfd04.css",
+    "static/js/main.b45253fb.js"
   ]
 }
