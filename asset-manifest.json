@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.84ee1809.css",
-    "main.js": "/static/js/main.3d136c23.js",
+    "main.css": "/static/css/main.c684734c.css",
+    "main.js": "/static/js/main.c52a6082.js",
     "static/js/787.f2ac2644.chunk.js": "/static/js/787.f2ac2644.chunk.js",
     "static/media/thumbs-up-engineer.gif": "/static/media/thumbs-up-engineer.0c8298f997138574277c.gif",
     "static/media/fresh_look.gif": "/static/media/fresh_look.27486bb413656eb3c7ef.gif",
@@ -15,6 +15,7 @@
     "static/media/alibaba-logo.png": "/static/media/alibaba-logo.85059c55b9c30f796867.png",
     "static/media/peach-box-goma.gif": "/static/media/peach-box-goma.070e1056b239187e90a3.gif",
     "static/media/LKC-logo.png": "/static/media/LKC-logo.56422bdebac394f3ba81.png",
+    "static/media/mochi_work.gif": "/static/media/mochi_work.2d2ae0a95656329ce446.gif",
     "static/media/lethal-company.gif": "/static/media/lethal-company.b6e40de38dc6ae888f07.gif",
     "static/media/peach_cat.gif": "/static/media/peach_cat.b9098978b3317bd0f0b5.gif",
     "static/media/gyoza.gif": "/static/media/gyoza.4b3a2c4457c0b1c1b2cf.gif",
@@ -25,12 +26,12 @@
     "static/media/maf_logo.png": "/static/media/maf_logo.7b44752c8040d31e3909.png",
     "static/media/linkedin.png": "/static/media/linkedin.b5deb89868f3bc2208ba.png",
     "index.html": "/index.html",
-    "main.84ee1809.css.map": "/static/css/main.84ee1809.css.map",
-    "main.3d136c23.js.map": "/static/js/main.3d136c23.js.map",
+    "main.c684734c.css.map": "/static/css/main.c684734c.css.map",
+    "main.c52a6082.js.map": "/static/js/main.c52a6082.js.map",
     "787.f2ac2644.chunk.js.map": "/static/js/787.f2ac2644.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84ee1809.css",
-    "static/js/main.3d136c23.js"
+    "static/css/main.c684734c.css",
+    "static/js/main.c52a6082.js"
   ]
 }
