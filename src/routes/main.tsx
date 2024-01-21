@@ -8,10 +8,14 @@ import lethal_company from '../resources/lethal-company.gif'
 import gyoza from '../resources/gyoza.gif';
 import shine_love from '../resources/shine-love.gif';
 import stonks from '../resources/stonks.gif';
+import rocky_playtime from '../resources/rocky_playtime.gif';
+import fresh_look from '../resources/fresh_look.gif';
+import mochi_work from "../resources/mochi_work.gif"
 
 import blue_skies from '../resources/blue_skies.jpg';
 import garden from '../resources/garden.jpg';
 import qr from '../resources/qr.jpg';
+import arrow from '../resources/arrow.png';
 
 import lkc_logo from '../resources/LKC-logo.png';
 import maf_logo from '../resources/maf_logo.png';
@@ -33,8 +37,10 @@ import '../styles/index.css'
 import '../styles/card.css'
 import '../styles/banner-card.css'
 
-import gsap from "gsap";
+import gsap, { SteppedEase } from "gsap";
 import { useLayoutEffect, useState } from 'react';
+import Typewriter from 'typewriter-effect';
+import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
 const roadmap = [
 
@@ -59,38 +65,16 @@ function App() {
   }
 
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     let ctx = gsap.context(() => {
       // ===== Start =====
-    
-      // Nav bar rotate effect
-      // let nav_items = gsap.utils.toArray<HTMLElement>(".navbar-item");
-      // nav_items.forEach((nav_item, i) => {
-        
-      //   nav_item.addEventListener("mouseenter", () => {
-      //     gsap.to(nav_item, 
-      //       {
-      //         rotationZ: 180, x: 0, duration: 0.5, overwrite: true, opacity: 1, ease: 'circ.out',
-      //       }
-      //     );
-      //   });
-        
-      //   nav_item.addEventListener("mouseout", () => {
-      //     gsap.to(nav_item, 
-      //       {
-      //         rotationZ: 0, x: 0, duration: 0.5, overwrite: true, opacity: 1, ease: 'circ.out',
-      //       }
-      //     );
-      //   });
-      // });
-
-      // gsap.to(".pendulum", {
-      //   rotation: 30, repeat: -1, yoyo: true, duration: 1,
-      // })
 
       let light_switch = gsap.utils.toArray<HTMLElement>('.light-switch')[0]; // Dark mode
       let pendulum = gsap.utils.toArray<HTMLElement>('.pendulum')[0]; // Spin it around
       let root = gsap.utils.toArray<HTMLElement>('#root')[0];
 
+      // ---- Pendulum ----
       light_switch.addEventListener("mouseup", () => {
         if (clicked) {
           clicked = !clicked;
@@ -110,19 +94,34 @@ function App() {
           })
           light_switch.classList.remove('light');
         }
-      })
+      });
 
       gsap.fromTo(".pendulum", 
       1, 
       {rotation:-60, duration: 8,}, 
-      {rotation:60, repeat:-1, yoyo:true, duration: 8, ease: "power2.inOut"})
+      {rotation:60, repeat:-1, yoyo:true, duration: 8, ease: "power2.inOut"});
 
-      // // Words moving effect
+      // ---- Title ----
+      gsap.fromTo(".title-antipasto", {
+        xPercent: -100,
+      }, {
+        delay: 0.1,
+        duration: 0.5,
+        xPercent: 0,
+      })
+      gsap.fromTo(".title-secondi", {
+        xPercent: -100,
+      }, {
+        delay: 0.15,
+        duration: 0.9,
+        xPercent: 0,
+      })
+
+      // ---- Moving Title ----
       // let title_left = document.getElementsByClassName("title-left")[0];
       // let title_right = document.getElementsByClassName("title-right")[0];
       // let title_left_a = document.getElementsByClassName("title-left-a")[0];
       // let title_right_a = document.getElementsByClassName("title-right-a")[0];
-      // // Todo, grab the anchors instead of the div.
       // // gsap.to(title_left, 
       // //   {
       // //     x: 100, repeat: -1, yoyo: true, duration: 10, yoyoEase: "power2.in",
@@ -153,34 +152,72 @@ function App() {
       //       color: "white",
       //     }) 
       //   })
-      
-      // Who card
-      // let who_cards = gsap.utils.toArray<HTMLElement>(".who-card");
-      // who_cards.forEach((who_card, i) => {
 
-      //   who_card.addEventListener("mouseenter", () => {
-      //     gsap.to(who_card, {
-      //       rotationY: 0, scale: 1.05, duration: 0.2
-      //     })
-      //     gsap.to(who_card, {
-      //       rotationX: 0, scale: 1.05, duration: 0.2
-      //     })
-      //   })
+      gsap.fromTo(".what-intro", {
+        opacity: 0.3,
+        duration: 5,
+        scrollTrigger: {
+          trigger: ".what-intro",
+          // markers: true,  
+        },
+      }, {
+        scrollTrigger: {
+          trigger: ".what-intro",
+          // markers: true,
+        },
+        opacity: 1,
+        duration: 5,
+      });
 
-      //   who_card.addEventListener("mouseout", () => {
-      //     gsap.to(who_card, {
-      //       rotationY: 0, scale: 1.02, duration: 0.2
-      //     })
-      //     gsap.to(who_card, {
-      //       rotationX: 0, scale: 1.0, duration: 0.2
-      //     })
-      //   })
+      // ---- Arrow ----
+      gsap.to(".scaling_arrow", {
+        yPercent: -500,
+        opacity: 0.5,
+        duration: 2,
+        ease: "power3.inOut",
+        scrollTrigger: {
+          trigger: ".scaling_arrow",
+          start: "top 88%",
+        }
+      });
 
-      // });
+      // ---- Cards ----
+      let who_cards = gsap.utils.toArray<HTMLElement>(".who-card");
+      who_cards.forEach((who_card, i) => {
+
+        gsap.fromTo(who_card, {
+          opacity: 0,
+          yPercent: 4,
+        },
+        {
+          scrollTrigger: {
+            trigger: who_card,
+            start: "top 77%",
+          }, 
+          opacity: 1,
+          duration: 2,
+          yPercent: 0,
+        });
+        
+      });
     
       // Project card flip effect
       let project_cards = gsap.utils.toArray<HTMLElement>(".project-card");
       project_cards.forEach((project_card, i) => {
+
+        gsap.fromTo(project_card, {
+          opacity: 0,
+          yPercent: 5,
+        },
+        {
+          scrollTrigger: {
+            trigger: project_card,
+            start: "top 86%",
+          }, 
+          opacity: 1,
+          duration: 2,
+          yPercent: 0,
+        });
         
         project_card.addEventListener("mouseenter", () => {
           gsap.to(project_card, 
@@ -203,31 +240,29 @@ function App() {
     });
   })
 
-  /* Lists */
-  const listItems = products.map(product =>
-    <li key={product.id}>
-      {product.title}
-    </li>
-  );
-
   return (
     <div className="App">
       <div className="App-header">
         {/* Title Section */}
-        <div className='title-section flex items-center place-content-center'>
+        <a href="#contacts">
+        <div className='title-contact absolute'>
+            C
+          </div></a>
+        <div className='title-section grid grid-rows-2 md:flex-row-reverse md:flex md:grid-rows-none items-center place-content-center'>
         {/* place-content-center items-center */}
           {/* <div className='title-container grid grid-cols-2 gap-8'> */}
-            <div className='title-container flex items-end'>
-              <div className='title-main flex flex-col items-start content-end text-left'>
-                <div><a>Hi, Jay here</a></div>
-                <div className='title-secondi'><a>Nice of you to drop by!</a></div>
-              </div>
+            <div className='title-picture'>
+              {/* <div className='title-absolute-border'></div> */}
+              <img src={smiling_dog} id='dog-typing' className="Jay-logo" alt="Cat typing on computer" />
             </div>
             <div className='title-space'>
 
             </div>
-            <div className='title-picture'>
-              <img src={smiling_dog} id='dog-typing' className="Jay-logo" alt="Cat typing on computer" />
+            <div className='title-container flex items-end'>
+              <div className='title-main flex flex-col items-start content-end text-left'>
+                <div className="title-antipasto"><a>Hi, Jay here</a></div>
+                <div className='title-secondi'><a>Nice of you to drop by!</a></div>
+              </div>
             </div>
           {/* </div> */}
           {/* Title Concept */}
@@ -241,14 +276,17 @@ function App() {
           </div>
         </div>
         {/* Who Section (Role) */}
-        <div className='who-intro'>
-            <p>(Mobile-view is kinda iffy right now! View on your lappies for a better experience)</p>
-            <img></img>
-        </div>
         <div className='who-section flex flex-col items-center'>
           <div className='who-card left flex flex-row place-content-center'>
-            <div className='who-card__text text-left'>
-              <p>I started as a tinkerer from a tiny age. My creations were janky, but I was so delighted whenever I could find any use for them.</p>
+            <div className='who-card__text text-left text-first'>
+              <p><Typewriter
+                    onInit={(typewriter) => {
+                      typewriter.changeDelay(75);
+                      typewriter.typeString('I started as a tinkerer from a tiny age. My creations were janky, but I was so delighted whenever I could find any use for them.')
+                        .start();
+                    }}
+                  />
+              </p>
             </div>
             <div className='who-card__space'>
 
@@ -263,7 +301,7 @@ function App() {
           </div>
           <div className='who-card left flex flex-row place-content-center'>
             <div className='who-card__text text-left'>
-              <p>Then, in my career, I learned to design and develop products - whether it be for colleagues or customers.
+              <p>Then, in my career, I learned to design and develop projects - whether it be for colleagues or customers.
               </p>
             </div>
             <div className='who-card__space'>
@@ -277,20 +315,20 @@ function App() {
 		    {/* Where Section */}
         <div className='where-section'>
           {/* STengg, PGSoft, Alibaba, NTU School of medicine, NTU SPMS, Mafint */}
-          <div className='experience-row flex space-x-11 place-content-center'>
-              <div>
+          <div className='experience-row grid grid-rows-5 sm:grid-rows-2 grid-flow-col md:flex md:space-x-11 place-content-center'>
+              <div className='place-content-center flex'>
                 <img src={maf_logo}></img>
               </div>
-              <div>
+              <div className='place-content-center flex'>
                 <img src={lkc_logo}></img>
               </div>
-              <div>
+              <div className='place-content-center flex'>
                 <img src={alibaba_logo}></img>
               </div>
-              <div>
+              <div className='place-content-center flex'>
                 <img src={pgsoft_logo}></img>
               </div>
-              <div>
+              <div className='place-content-center flex'>
                 <img src={stengg_logo}></img>
               </div>
             </div>
@@ -317,6 +355,9 @@ function App() {
                 <i>Feel free to connect with me on LinkedIn! I won't bite!</i>
               </p> */}
             </div>
+            <div className='scaling_arrow'>
+              <img src={arrow} alt="arrow going up"></img>
+            </div>
             <div className='who-card__space'>
 
             </div>
@@ -327,11 +368,13 @@ function App() {
         </div>
         {/* What Section (Project showcases) */}
         <div className='what-intro'>
-            <p>Here are some of the things I've done! ❤️</p>
+            <p>What are your new year's resolutions? 🚦🚧<i>(WIP)</i></p>
             <img></img>
         </div>
-        <div className='what-section grid grid-cols-3 gap-8'>
-          <div className='project-card'>
+        <div className='what-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+          <a href="https://github.com/herougan/TradeHunter" target="_blank">
+          <div id="project-1" className='project-card'>
+            <div className="shade"></div>
             <div className='project-card-img'>
               <img src={stonks} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
@@ -341,8 +384,9 @@ function App() {
             <div className='project-desc'>
               Create and backtest trading robo-advisors against custom datasets.
             </div>
-          </div>
-          <div className='project-card'>
+          </div></a>
+          <div id="project-2"  className='project-card dark'>
+            <div className="shade"></div>
             <div className='project-card-img'>
               <img src={peach_goma} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
@@ -350,7 +394,8 @@ function App() {
               Hela
             </div>
           </div>
-          <div className='project-card'>
+          <div id="project-3"  className='project-card dark'>
+            <div className="shade"></div>
             <div className='project-card-img'>
               <img src={shine_love} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
@@ -359,7 +404,8 @@ function App() {
             </div>
           </div>
 
-          <div className='project-card'>
+          <div id="project-4"  className='project-card dark'>
+            <div className="shade"></div>
             <div className='project-card-img'>
               <img src={gyoza} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
@@ -367,15 +413,17 @@ function App() {
               DealGPT
             </div>
           </div>
-          <div className='project-card'>
+          <div id="project-5"  className='project-card dark'>
+            <div className="shade"></div>
             <div className='project-card-img'>
-              <img src={garden} id='engineering' alt="gears and wrenches" role='decorative'></img>
+              <img src={fresh_look} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
             <div className='project-desc'>
               Drop-In
             </div>
           </div>
-          <div className='project-card'>
+          <div id="project-6"  className='project-card dark'>
+            <div className="shade"></div>
             <div className='project-card-img'>
               <img src={lethal_company} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
@@ -384,17 +432,28 @@ function App() {
             </div>
           </div>
 
-          <div className='project-card'>
+          <div id="project-7"  className='project-card dark'>
+            <div className="shade"></div>
+            <div className='project-card-img'>
+              <img src={mochi_work} id='engineering' alt="gears and wrenches" role='decorative'></img>
+            </div>
+            <div className='project-desc'>
+              Jay's Coffee
+            </div>
+          </div>
+          <div id="project-8"  className='project-card dark'>
+            <div className="shade"></div>
             <div className='project-card-img'>
               <img src={thumbs_up_engineer} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
             <div className='project-desc'>
-              WIP
+              Splitthat
             </div>
           </div>
-          <div className='project-card'>
+          <div id="project-9"  className='project-card dark'>
+            <div className="shade"></div>
             <div className='project-card-img'>
-              <img src={thumbs_up_engineer} id='engineering' alt="gears and wrenches" role='decorative'></img>
+              <img src={rocky_playtime} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
             <div className='project-desc'>
               WIP
@@ -413,15 +472,15 @@ function App() {
       </div>
       <div>
         {/* Socials and Links */}
-        <div className='socials-row flex space-x-11 place-content-center'>
+        <div id="contacts" className='socials-row flex space-x-11 place-content-center'>
           {/* <div><img src={spotify}></img></div>
           <div><img src={discord}></img></div>
           <div><img src={facebook}></img></div> */}
-          <div><img src={twitter}></img></div>
-          <div><a href="https://github.com/herougan"><img src={github}></img></a></div>
+          <div><a href="https://twitter.com/herougan" target="_blank"><img alt="twitter link" src={twitter}></img></a></div>
+          <div><a href="https://github.com/herougan" target="_blank"><img alt="github link" src={github}></img></a></div>
           {/* <div><img src={instagram}></img></div>
           <div><img src={youtube}></img></div> */}
-          <div><a href="https://www.linkedin.com/in/jiahao-zhang-jay/"><img src={linkedin}></img></a></div>
+          <div><a href="https://www.linkedin.com/in/jiahao-zhang-jay/" target="_blank"><img alt="linkedin link" src={linkedin}></img></a></div>
           {/* <div><a id="linkedin" href="https://www.linkedin.com/in/jiahao-zhang-jay/"></a></div> */}
           {/* <a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Freepik - Flaticon</a> */}
           {/* <p>Reach out to me on...</p> */}

@@ -10,6 +10,7 @@ Requirements
 3) Splash
 	Screen goes down at different speeds? Artistic + User entranced by non-sinngular scroll speed
 	Splash (Artistic)
+  Contact me button spins around on mouseover - cooldown for 1s
 4) Who am I (Cards)
 	Physicist,
 	Developer of the Web, of Systems, of Software,
@@ -39,6 +40,7 @@ Requirements
   (Hovering over one, highlights one of them and puts it above the other)
   The words move into each other and out, like in a sin wave pattern, very slowly
   (Some letters turn red on hover - might be impossible unless we separate each text into their own col)
+  On hover, image border (coloured, blows up and gsaps out. (increases in size - quite cool effect))
 
   Title-left and title-right words lay along the page
   they blend into the background when you scroll down
@@ -118,6 +120,8 @@ Vertical Card Items
 Highlighting some words in the who-card menu
 
 Physics applied to some random item in the page
+
+2.5d effect for background
 
 */
 
