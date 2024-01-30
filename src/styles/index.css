@@ -19,6 +19,8 @@
   --colour4: #F4ACB7;
   --colour5: #9D8189;
   --colour6: #675157;
+  --colour7: #1c1819;
+  --colour7b: #2b2124;
 }
 
 body {
@@ -38,6 +40,11 @@ body {
 #root {
   background-color: var(--colour5);
   opacity: 0.98;
+}
+
+#root.dark {
+  background-color: var(--colour7);
+  background: linear-gradient(var(--colour7), var(--colour7b))
 }
 
 code {

@@ -31,6 +31,7 @@
 
 .what-section {
   margin-bottom: 5vh;
+  margin-top: 2vh;
 }
 
 .who-card {
@@ -150,6 +151,10 @@
   height: 20px;
   object-fit: cover;
   filter: brightness(100);
+
+  &:hover {
+    height: 25px;
+  }
 }
 
 .experience-row img {

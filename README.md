@@ -77,6 +77,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Push updates to gh-pages
 # npm run deploy -- -m "Deploy React app to GitHub Pages"
 ### npm run start
+# Start the local server
 
 ### Blog page
 ### links to blog pages in the home page at the end

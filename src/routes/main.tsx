@@ -85,13 +85,15 @@ function App() {
 
         if (dark) {
           gsap.to(root, {
-            backgroundColor: "#1c1819",
+            // backgroundColor: "#1c1819",
           })
+          root.classList.add('dark');
           light_switch.classList.add('light');
         } else {
           gsap.to(root, {
-            backgroundColor: "#9D8189",
+            // backgroundColor: "#9D8189",
           })
+          root.classList.remove('dark');
           light_switch.classList.remove('light');
         }
       });
@@ -217,23 +219,24 @@ function App() {
           opacity: 1,
           duration: 2,
           yPercent: 0,
-        });
-        
-        project_card.addEventListener("mouseenter", () => {
-          gsap.to(project_card, 
-            {
-              rotationY: 0, scale: 1.05, x: 0, duration: 0.1, overwrite: true, opacity: 1,
-            }
-          );
-        });
-        
-        project_card.addEventListener("mouseout", () => {
-          gsap.to(project_card, 
-            {
-              rotationY: 0, scale: 1.0, x: 0, duration: 0.1, overwrite: true, opacity: 1,
-            }
-          );
-        });
+		  onComplete() {
+			project_card.addEventListener("mouseenter", () => {
+			  gsap.to(project_card, 
+				{
+				  rotationY: 0, scale: 1.05, x: 0, duration: 0.1, overwrite: true, opacity: 1,
+				}
+			  );
+			});
+			
+			project_card.addEventListener("mouseout", () => {
+			  gsap.to(project_card, 
+				{
+				  rotationY: 0, scale: 1.0, x: 0, duration: 0.1, overwrite: true, opacity: 1,
+				}
+			  );
+			});
+		  },
+        })
       });
 
       // ===== End =====
@@ -385,6 +388,7 @@ function App() {
               Create and backtest trading robo-advisors against custom datasets.
             </div>
           </div></a>
+          <a href="https://helatalk.com/">
           <div id="project-2"  className='project-card dark'>
             <div className="shade"></div>
             <div className='project-card-img'>
@@ -393,7 +397,8 @@ function App() {
             <div className='project-desc'>
               Hela
             </div>
-          </div>
+          </div></a>
+          <a href="https://about.appsheet.com/home/">
           <div id="project-3"  className='project-card dark'>
             <div className="shade"></div>
             <div className='project-card-img'>
@@ -402,7 +407,7 @@ function App() {
             <div className='project-desc'>
               Opuloats
             </div>
-          </div>
+          </div></a>
 
           <div id="project-4"  className='project-card dark'>
             <div className="shade"></div>

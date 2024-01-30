@@ -96,28 +96,10 @@ Requirements
 
 */
 
-
-/* 
-https://www.wix.com/blog/best-portfolio-websites
-
-Roles:
-
-Creative, Spinclass, Kid
-Project Manager
-Developer, Data Analyst
-Physicist, Mathematician, Philosopher
-
-Banner Cards, Left Image, Right Text
-(Banner floats in cutely and with more force)
-(Text appears to float up abit, and appear from fade)
-
-*/
-
 /*
 Showcases:
 
-Vertical Card Items
-Highlighting some words in the who-card menu
+Highlighting some words in the who-card menu (animation)
 
 Physics applied to some random item in the page
 
@@ -145,11 +127,16 @@ Game:
 Qr Code then hides within folders
 
 */
-/*
-Pages:
+/* Code smoothening
 
-https://reactrouter.com/en/main/start/tutorial
-For nested pages/routing
-
+0) Only add hover over effects AFTER fade-in compelete
+1) css (for title-shade) change images to same height and width; width changes at different media query points
+Title text has a max-font-size but decreases automatically as the screen decreasess
+2) typing should start midway - and only begin on start() callback (gsap)
+3) Better project-cards (Title then text)
+4) Buttons highlight slightly on hover
+5) Fix mobile
+  5b) For mobile, project cards appear from the left
+6) photo collage for some of my better projects
 
 */
