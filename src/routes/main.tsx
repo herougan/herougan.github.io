@@ -371,7 +371,7 @@ function App() {
         </div>
         {/* What Section (Project showcases) */}
         <div className='what-intro'>
-            <p>What are your new year's resolutions? 🚦🚧<i>(WIP)</i></p>
+            <p>~</p>
             <img></img>
         </div>
         <div className='what-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
@@ -408,16 +408,18 @@ function App() {
               Opuloats
             </div>
           </div></a>
-
+		
+		  <a href="https://herougan.github.io/jay-coffee-example">
           <div id="project-4"  className='project-card dark'>
             <div className="shade"></div>
             <div className='project-card-img'>
               <img src={gyoza} id='engineering' alt="gears and wrenches" role='decorative'></img>
             </div>
             <div className='project-desc'>
-              DealGPT
+              Coffee Site
             </div>
           </div>
+		  </a>
           <div id="project-5"  className='project-card dark'>
             <div className="shade"></div>
             <div className='project-card-img'>
@@ -465,14 +467,14 @@ function App() {
             </div>
           </div>
         </div>
+
+        {/* None */}
+        <div className='backlog-section'>
+
+        </div>
         
         <div className='what-intro mt-5'>
           <p>Check out my work on github, and connect with me on LinkedIn!</p>
-        </div>
-
-        {/* Life Backlog (Starchart) */}
-        <div className='backlog-section'>
-
         </div>
       </div>
       <div>
